@@ -1,0 +1,15 @@
+dist
+build
+out
+
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+coverage
+
+.eslintcache
+.vite
+
+public
+assets
