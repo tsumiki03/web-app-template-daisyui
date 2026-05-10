@@ -1,8 +1,8 @@
 import { http, HttpResponse } from "msw";
 
 export const handlers = [
-  http.get("/api/todo/health", () => {
-    console.log("MSW: Intercepted GET /api/todo/health");
+  http.get("/api/app/health", () => {
+    console.log("MSW: Intercepted GET /api/app/health");
     return HttpResponse.json({ status: "ok" });
   }),
 ];

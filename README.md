@@ -1,2 +1,2 @@
-# todo-app
-Todoアプリ
+# webapp-template-daisyui
+Webアプリテンプレート

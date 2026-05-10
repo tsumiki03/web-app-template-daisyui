@@ -7,7 +7,7 @@ function App() {
 
   const checkHealth = async () => {
     try {
-      const response = await api.get("/api/todo/health");
+      const response = await api.get("/api/app/health");
       setHealthStatus(response.data.status);
     } catch (error) {
       if (axios.isAxiosError(error)) {

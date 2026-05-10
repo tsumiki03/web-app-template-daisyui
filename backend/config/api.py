@@ -1,6 +1,6 @@
 from ninja import NinjaAPI
-from todo.api import router as todo_router
+from app.api import router as app_router
 
 api = NinjaAPI()
 
-api.add_router("/todo/", todo_router)
+api.add_router("/app/", app_router)

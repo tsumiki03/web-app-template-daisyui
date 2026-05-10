@@ -32,7 +32,7 @@ describe("App Component", () => {
 
   test("サーバーエラー時にエラーメッセージが表示されること", async () => {
     server.use(
-      http.get("/api/todo/health", () => {
+      http.get("/api/app/health", () => {
         return new HttpResponse(null, { status: 500 });
       }),
     );
