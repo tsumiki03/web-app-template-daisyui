@@ -1,5 +1,11 @@
 # Frontend (React + TypeScript + Vite + daisyUI)
 
+## セットアップ
+パッケージ管理には `pnpm` を使用
+``` bash
+pnpm install
+```
+
 ## インストールパッケージ
 ### dependencies
 ```
