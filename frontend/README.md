@@ -1,13 +1,17 @@
 # Frontend (React + TypeScript + Vite + daisyUI)
 
 ## セットアップ
+
 パッケージ管理には `pnpm` を使用
-``` bash
+
+```bash
 pnpm install
 ```
 
 ## インストールパッケージ
+
 ### dependencies
+
 ```
     "@tailwindcss/vite": "0.0.0-insiders.f3fdda2",
     "axios": "^1.16.0",
@@ -16,7 +20,9 @@ pnpm install
     "react-dom": "^19.2.5",
     "tailwindcss": "^4.2.4"
 ```
+
 ### devDependencies
+
 ```
     "@eslint/js": "^10.0.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -42,6 +48,7 @@ pnpm install
 ```
 
 ## 開発コマンド
+
 - `pnpm add <パッケージ名>`: パッケージ追加
 - `pnpm dev`: 開発サーバー起動
 - `pnpm build`: プロダクションビルド (TypeScript 型チェック含む)
@@ -54,14 +61,16 @@ pnpm install
 - `pnpm test:ui`: Vitest UI 起動
 
 ## MSW (Mock Service Worker)
+
 - バックエンド開発とは独立して API のモックを定義してテストが可能
 - `src/mocks/handlers.ts` にて API のモックを定義する
 - デフォルトで以下エンドポイントを定義済み
-    - パス : `/api/app/health`
-    - GET リクエスト時のレスポンス : `{"status": "ok"}`
+  - パス : `/api/app/health`
+  - GET リクエスト時のレスポンス : `{"status": "ok"}`
 
 ## axios の動作
+
 - `src/lib/axios.ts` にて、`baseURL` を環境変数 `VITE_API_BASE_URL` の値に設定済み
 - 開発サーバー起動 (`pnpm dev`) 時には `.env.development` ファイルの値が使用され、テスト実行時には `.env.test` ファイルの値が使用される
--  `VITE_API_BASE_URL` のデフォルト値として、 `.env.development` では `http://localhost:8000` を、`.env.test` では空文字を設定済み
+- `VITE_API_BASE_URL` のデフォルト値として、 `.env.development` では `http://localhost:8000` を、`.env.test` では空文字を設定済み
 - 開発サーバー起動時はバックエンドも開発サーバーを起動し、テスト実行時は MSW を使用する想定
